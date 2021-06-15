@@ -1,0 +1,6 @@
+python demo.py -i ./demo -o ./output --model output/20210527-121652/models/epoch-001-psnr-32.4667.h5
+
+python convert.py -i ./DATA -o ./DATA_BIN numpy
+
+python train.py --dataset ./DATA_BIN --outdir ./output --profile edsr --scale 2
+
